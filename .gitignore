@@ -1,0 +1,24 @@
+# Build output
+build/
+build-*/
+out/
+cmake-build-*/
+
+# Visual Studio and other editors
+.vs/
+.vscode/
+.idea/
+CMakeUserPresets.json
+*.user
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Team data: these hold real people's names, keep them out of GitHub
+*.db
+*.db-journal
+roster.csv
+attendance.csv
+results.csv

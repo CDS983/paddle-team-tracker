@@ -1,0 +1,6 @@
+# Let Git handle line endings, so the files work on Windows, macOS and Linux.
+* text=auto
+
+# SQLite is someone else's code. This keeps it out of GitHub's language
+# statistics, so the repository is reported as C++ and not C.
+third_party/** linguist-vendored
