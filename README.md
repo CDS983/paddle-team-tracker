@@ -82,3 +82,6 @@ third_party/  SQLite (public domain)
 
 `docs/ARCHITECTURE.md` explains the design: the database schema, how a request travels through the layers, and the reasons behind the main decisions.
 
+## Development
+I had been building this project locally for over 8 months roughly beginning in March 2026 and published to github once I was able to get the first full version up and running. 
+
