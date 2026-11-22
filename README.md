@@ -3,7 +3,7 @@
 A roster, attendance and performance tracker for dragon boat and outrigger crews, written in C++17 with a SQLite database. It runs in a terminal.
 
 ## Why I built this: 
-Throughout my entire paddling career there has never been any kind of uniform or standard system for organizing and tracking paddler statistics. I have seen coaches simply make rosters based on spreadsheets that could crash your device if your phone wasn't strong enough to handle them, simply through sight, or going off of statistics written down on a white board. My goal was to begin creating a system that would make it easier for coaches and training staff to catalog their data and quickly rank paddlers. As of now the app allows for staff to catalog speed, weight, height, sex, preferred paddling side, and their attendance. 
+Throughout my entire paddling career there has never been any kind of uniform or standard system for organizing and tracking paddler statistics. I have seen coaches simply make rosters based on spreadsheets that could crash your device if your phone wasn't strong enough to handle them, simply through sight, or going off of statistics written down on a white board. My goal was to begin creating a system that would make it easier for coaches and training staff to catalog their data and quickly rank paddlers. As of now the app allows for staff to catalog speed, weight, gender, preferred paddling side, and their attendance. 
 
 ```
 Performance: 200 m time trial
@@ -20,12 +20,12 @@ Ranked by each active athlete's best result. Lower is better.
 - **Names and statistics in the sample file are fully made up and do not represent any real person. 
 ## What it does
 
-- **Roster**: each athlete's side (left, right or both), role, gender, weight and notes. Athletes can be made inactive, which keeps their history but takes them off new attendance sheets.
+- **Roster**: each athlete's side (left, right or both), role, gender, weight and notes. Athletes can also be made inactive, this will make it so their data stay but they won't be counted towards rosters.
 - **Attendance**: create a practice and mark athletes present, late, absent or excused. Several athletes can be marked in one line (`2 5 L`), and `rest P` marks everyone left as present. Each athlete gets an attendance percentage and a record of their last 10 practices.
-- **Performance**: log a whole session of time-trial results at once and see the crew ranked by best result, with the gap to the leader. Tests are yours to define: times (200 m, 500 m and 2000 m are set up to start) or numbers such as pull-ups.
-- **Team data**: export the roster, attendance and results as CSV files for Excel or Google Sheets, load a sample crew of invented athletes, or erase everything.
+- **Performance**: log a whole session of time-trial results at once and see the crew ranked by best result, with the difference in time to the leader. 200m, 500m, and 2000m tests are listed but the user is able to add whatever distance or type of metric they want to add.
+- **Team data**: export the roster, attendance and results as CSV files for Excel or Google Sheets, load the sample crew, or erase everything.
 
-Everything is stored in a single file, `team.db`, in the folder the program is started from. Copying that file is a complete backup.
+Everything is stored in a single file, `team.db`, in the folder the program is started from.
 
 ## Build and run
 
@@ -36,7 +36,7 @@ Everything is stored in a single file, `team.db`, in the folder the program is s
 2. Choose **File > Open > Folder** and pick this folder. Visual Studio reads `CMakeLists.txt` and sets the project up.
 3. In the startup item dropdown next to the green Run button, choose `paddle-team-tracker.exe`, then run it.
 
-### Command line (Windows, macOS or Linux)
+### Command line (Windows)
 
 ```
 cmake -S . -B build
